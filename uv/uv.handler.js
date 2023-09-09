@@ -15,7 +15,7 @@
       location.href = "https://google.com";
     }
     function yeet(){
-if(document.getElementsByClassName("video-ads") != null && !document.hidden){
+if(document.getElementsByClassName("video-ads").length != 0 && !document.hidden){
 if(document.getElementsByClassName("video-ads")[0].innerHTML !==""){
 var banner = false; 
 for(var i = 0; i < document.getElementsByClassName("ytp-ad-overlay-close-button").length; i++){
