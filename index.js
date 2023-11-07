@@ -22,8 +22,8 @@ window.addEventListener("load", async () => {
   try {
     await registerSW();
   } catch (err) {
-    error.textContent = "Failed to register service worker.";
-    errorCode.textContent = err.toString();
+    alert("Failed to register service worker.");
+     alert(err.toString());
     throw err;
   }
 
