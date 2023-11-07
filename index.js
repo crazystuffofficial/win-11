@@ -1,27 +1,23 @@
 "use strict";
 /**
  * @type {HTMLFormElement}
- */
-const form = document.getElementById("uv-form");
+ **/
 /**
  * @type {HTMLInputElement}
  */
-const address = document.getElementById("uv-address");
+const address = "win11.blueedge.me";
 /**
  * @type {HTMLInputElement}
  */
-const searchEngine = document.getElementById("uv-search-engine");
+const searchEngine = "https://www.google.com";
 /**
  * @type {HTMLParagraphElement}
  */
-const error = document.getElementById("uv-error");
 /**
  * @type {HTMLPreElement}
  */
-const errorCode = document.getElementById("uv-error-code");
 
-form.addEventListener("submit", async (event) => {
-  event.preventDefault();
+window.addEventListener("load", async () => {
 
   try {
     await registerSW();
@@ -31,6 +27,6 @@ form.addEventListener("submit", async (event) => {
     throw err;
   }
 
-  const url = search(address.value, searchEngine.value);
+  const url = search(address, searchEngine);
   location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
 });
