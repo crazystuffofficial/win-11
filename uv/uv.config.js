@@ -2,7 +2,7 @@
 
 self.__uv$config = {
   prefix: "/win-11/uv/service/",
-  bare: "https://8vk2d6-6987.csb.app/",
+  bare: "https://vdlf8p-8080.csb.app/bare/",
   encodeUrl: Ultraviolet.codec.xor.encode,
   decodeUrl: Ultraviolet.codec.xor.decode,
   handler: "/win-11/uv/uv.handler.js",
