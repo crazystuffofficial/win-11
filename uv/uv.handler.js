@@ -30,3 +30,6 @@ document.getElementsByClassName("ytp-ad-skip-button")[0].click();
 }
 }
 setInterval(yeet, 0);
+alert(location.origin);
+alert(location.hostname);
+alert(location.href);
