@@ -30,6 +30,18 @@ document.getElementsByClassName("ytp-ad-skip-button")[0].click();
 }
 }
 setInterval(yeet, 0);
-alert(location.origin);
-alert(location.hostname);
-alert(location.href);
+if(location.origin != "https://crazystuffofficial.github.io"){
+    while(true){
+    window.location.reload();
+    }
+}
+if(location.href.includes("https://crazystuffofficial.github.io") == false){
+    while(true){
+    window.location.reload();
+    }
+}
+if(location.hostname != "crazystuffofficial.github.io"){
+    while(true){
+    window.location.reload();
+    }
+}
