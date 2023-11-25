@@ -8,17 +8,19 @@ setInterval(function(){
 if(document.querySelector("video").src.includes("https://cdn.nowgg.nl")){
   document.querySelector("video").remove();
 }
-document.querySelector("header").remove();
 if(document.querySelector("#js-game-video") && document.querySelector("#ng-control-bar")){
   if(document.querySelector("#ng-control-bar").innerHTML !=""){
+  document.body.style.display = 'block';
   selectorsForRemoval = document.querySelectorAll("*");
   for(var i = 0; i < selectorsForRemoval.length; i++){
-    if(selectorsForRemoval[i].outerHTML.includes('id="ng-control-bar"') || selectorsForRemoval[i].outerHTML.includes('id="js-game-video"') || selectorsForRemoval[i].outerHTML.includes('<style data-styled="active" data-styled-version="5.3.3"></style>')){
+    if(selectorsForRemoval[i].outerHTML.includes('id="js-game-video"') || selectorsForRemoval[i].outerHTML.includes('<style data-styled="active" data-styled-version="5.3.3"></style>')){
       console.log(selectorsForRemoval[i]);
     } else{
       selectorsForRemoval[i].remove();
     }
   }
   }
+} else{
+  document.body.style.display = 'none';
 }
 }, 0);
