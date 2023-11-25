@@ -12,7 +12,6 @@ if(document.querySelector("video").src.includes("https://cdn.nowgg.nl")){
 }
 }
 if(document.querySelector("#js-game-video") && document.querySelector("#ng-control-bar")){
-  if(document.querySelector("#ng-control-bar").innerHTML !=""){
   document.body.style.display = 'block';
   selectorsForRemoval = document.querySelectorAll("*");
   for(var i = 0; i < selectorsForRemoval.length; i++){
@@ -23,10 +22,12 @@ if(document.querySelector("#js-game-video") && document.querySelector("#ng-contr
     }
   }
   removed = true;
-  }
 } else{
   if(removed == false){
   document.body.style.display = 'none';
+  } else{
+    document.body.style.display = 'block';
+    document.body.style.backgroundColor = 'black';
   }
 }
 }, 0);
