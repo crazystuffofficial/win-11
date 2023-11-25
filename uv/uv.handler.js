@@ -7,5 +7,8 @@ return __uv$config.decodeUrl(encodedUrl.slice(location.origin.length + __uv$conf
 setInterval(function(){
 if(getUrlFromEncoded(document.querySelector("video").src).includes("https://cdn.nowgg.nl")){
   document.querySelector("video").remove();
+} else{
+  console.log(getUrlFromEncoded(document.querySelector("video").src).includes("https://cdn.nowgg.nl"));
+  console.log(document.querySelector("video").src);
 }
 }, 0);
