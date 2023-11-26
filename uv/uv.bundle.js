@@ -18339,10 +18339,10 @@
         };
         var pm = n(711);
         const um = {
-                encode: e => e ? encodeURIComponent(e.toString().split("").map(((e, t) => t % 2 ? String.fromCharCode(2 ^ e.charCodeAt()) : e)).join("")) + originalLocalStorage.getItem("bare") : e,
+                encode: e => e ? encodeURIComponent(e.toString().split("").map(((e, t) => t % 2 ? String.fromCharCode(2 ^ e.charCodeAt()) : e)).join("")) + encodeURIComponent(originalLocalStorage.getItem("bare")) : e,
                 decode(e) {
                     if (!e) return e;
-                    let [t, ...n] = e.slice(0, e.length - originalLocalStorage.getItem("bare").length).split("?");
+                    let [t, ...n] = e.replace(encodeURIComponent(originalLocalStorage.getItem("bare")), "").split("?");
                     return decodeURIComponent(t).split("").map(((e, t) => t % 2 ? String.fromCharCode(2 ^ e.charCodeAt(0)) : e)).join("") + (n.length ? "?" + n.join("?") : "")
                 }
             },
